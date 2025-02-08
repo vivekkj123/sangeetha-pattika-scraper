@@ -29,8 +29,8 @@ Sangeetha Pattika is a project that scrapes song data from [Malayalasangeetham.i
 ### 1. Clone the Repository
 
 ```bash
-git clone <repository-url>
-cd <repository-folder>
+git clone git@github.com:vivekkj123/sangeetha-pattika-scraper.git
+cd sangeetha-pattika-scraper
 ```
 
 ### 2. Create a virtul env and Install the required Python dependencies
@@ -43,7 +43,7 @@ pip install -r requirements.txt
 ### 2. Run the Script
 
 ```bash
-python scraper.py
+python script.py
 ```
 
 ### 3. Output
