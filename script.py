@@ -144,7 +144,9 @@ def generate_wikipedia_table_with_links(data):
 
             first_movie = False
 
-    wikipedia_table += "|}"
+    wikipedia_table += "|}\n"
+    # Add the reference citation at the end
+    wikipedia_table += "{{cite web |url=https://www.malayalasangeetham.info/ |title=Malayalasangeetham.info |website=Malayalasangeetham |access-date={{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}} }}\n"
     return wikipedia_table
 
 
