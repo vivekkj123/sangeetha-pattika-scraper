@@ -5,6 +5,7 @@ import difflib
 
 # Base URL to fetch pages
 BASE_URL = "https://www.malayalasangeetham.info/songs.php?singers=P%20Jayachandran&singtype=solo&tag=Search&limit=470&page_num={}"
+total_pages = 10  # Adjust this if there are more pages
 
 def scrape_page(page_num):
     """
@@ -25,10 +26,6 @@ def scrape_page(page_num):
             year = columns[2].text.strip()
             page_data.append((year, movie_name, song_name))
     return page_data
-
-
-import requests
-import difflib
 
 def find_wikipedia_article(movie_name):
     """
@@ -153,7 +150,6 @@ def generate_wikipedia_table_with_links(data):
 
 def main():
     all_data = []
-    total_pages = 10  # Adjust this if there are more pages
 
     for page_num in range(1, total_pages + 1):
         print(f"Scraping page {page_num}...")
